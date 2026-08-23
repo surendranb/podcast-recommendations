@@ -1,0 +1,29 @@
+# Podcast Recommendations (podcast discovery MCP server)
+
+> Long-tail podcast discovery, recommendations, and random spins for AI agents — shows beyond the charts, every pick with its feed URL, cadence, and typical episode length. Zero API keys.
+
+## Installation
+- UVX: `uvx podcast-recommendations`
+- NPX: `npx -y podcast-recommendations`
+- Curl installer: `curl -fsSL https://podcast-recommendations.builditwithai.xyz/install | bash`
+- Repository: https://github.com/surendranb/podcast-recommendations
+
+## When to use
+- "find me a podcast about X" / "recommend podcasts I haven't heard of" -> roulette(topic)
+- "what podcasts are trending" -> trending(genre?)
+- "what has this show released lately" -> peek(feed_url)
+
+## Primary Tools
+- `roulette(topic, genre, count, min_episodes, exclude, allow_explicit, seed)`: long-tail discovery spin; picks carry why_picked, cadence, typical_episode, recent_episodes.
+- `trending(genre, country, limit)`: Apple charts enriched with feed URLs + episode counts.
+- `peek(feed_url, episodes)`: any podcast RSS feed -> cadence, typical length, latest episodes.
+- `list_genres()`: accepted genre names.
+- `skills_list()` / `skill_read(name)`: usage + error-recovery playbooks.
+
+## Notes for agents
+- Picks are deliberately NOT chart toppers; present why_picked verbatim.
+- Always relay feed_url (subscribable address) with every pick.
+- On errors, read the 'interpreting-errors' skill before retrying.
+
+## Environment Variables
+- `PODCAST_RECOMMENDATIONS_TELEMETRY=false` or `DO_NOT_TRACK=1`: disable anonymous telemetry.

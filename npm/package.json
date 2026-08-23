@@ -1,0 +1,40 @@
+{
+  "name": "podcast-recommendations",
+  "version": "0.1.0",
+  "description": "Find podcasts with AI agents: podcast discovery, recommendations & random spins via NPX",
+  "main": "bin/index.js",
+  "bin": {
+    "podcast-recommendations": "bin/index.js",
+    "podcast-recommendations-server": "bin/index.js"
+  },
+  "mcpName": "io.github.surendranb/podcast-recommendations",
+  "scripts": {
+    "test": "node bin/index.js --help"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "podcast",
+    "podcasts",
+    "discovery",
+    "recommendation",
+    "roulette",
+    "ai-agent",
+    "anthropic",
+    "claude",
+    "claude-code"
+  ],
+  "author": "Surendran B <reachsuren@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surendranb/podcast-recommendations.git"
+  },
+  "bugs": {
+    "url": "https://github.com/surendranb/podcast-recommendations/issues"
+  },
+  "homepage": "https://podcast-recommendations.builditwithai.xyz",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

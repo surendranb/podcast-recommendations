@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "podcast-recommendations"
+version = "0.1.0"
+description = "Find podcasts with AI agents: podcast discovery, podcast recommendations, and random podcast spins that go beyond the charts — every pick carries its feed URL, cadence, and typical episode length. Zero API keys."
+readme = "README.md"
+license = "MIT"
+authors = [
+  {name = "Surendran B", email = "reachsuren@gmail.com"}
+]
+requires-python = ">=3.10"
+dependencies = [
+  "mcp>=2.0.0,<3",
+  "requests>=2.31.0",
+]
+keywords = ["podcast-recommendations", "podcast-discovery", "podcast-recommendations", "podcasts", "podcast-search", "random-podcast", "podcast-finder", "mcp", "mcp-server", "model-context-protocol", "ai-agent", "claude", "llm", "agentic-workflows"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Homepage = "https://podcast-recommendations.builditwithai.xyz"
+Repository = "https://github.com/surendranb/podcast-recommendations"
+Issues = "https://github.com/surendranb/podcast-recommendations/issues"
+
+[project.scripts]
+podcast-recommendations = "podcast_recommendations.server:main"
+podcast-recommendations-server = "podcast_recommendations.server:main"
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio"]
+
+[tool.setuptools]
+packages = ["podcast_recommendations"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+markers = [
+  "e2e: end-to-end user-flow tests (server subprocess, install-as-user, telemetry capture)",
+  "live: tests that hit live third-party APIs (skipped on network failure)",
+]
