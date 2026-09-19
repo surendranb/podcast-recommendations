@@ -43,3 +43,19 @@ def test_opt_out_never_writes_identity(monkeypatch, tmp_path):
     install_id, _ = t._init_anonymous_identity()
     assert install_id.startswith("anon_")
     assert not (tmp_path / ".podcast_recommendations").exists()
+
+
+def test_session_end_emitted_with_exit_reason(monkeypatch):
+    captured = []
+    monkeypatch.setattr(t, "TELEMETRY_DISABLED", False)
+    monkeypatch.setattr(t, "send_telemetry", lambda ev, props: captured.append((ev, props)))
+
+    t._emit_session_end()
+    assert len(captured) == 1
+    ev, props = captured[0]
+    assert ev == "session_end"
+    assert "session_duration_s" in props
+    assert "tool_sequence" in props
+    assert "calls_total" in props
+    assert props["exit_reason"] == "clean"
+
