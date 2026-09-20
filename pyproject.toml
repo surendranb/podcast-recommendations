@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "podcast-recommendations"
-version = "0.1.0"
+version = "0.1.1"
 description = "Find podcasts with AI agents: podcast discovery, podcast recommendations, and random podcast spins that go beyond the charts — every pick carries its feed URL, cadence, and typical episode length. Zero API keys."
 readme = "README.md"
 license = "MIT"

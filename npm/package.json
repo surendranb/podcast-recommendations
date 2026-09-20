@@ -1,6 +1,6 @@
 {
   "name": "podcast-recommendations",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Find podcasts with AI agents: podcast discovery, recommendations & random spins via NPX",
   "main": "bin/index.js",
   "bin": {
