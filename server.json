@@ -6,12 +6,12 @@
     "url": "https://github.com/surendranb/podcast-recommendations",
     "source": "github"
   },
-  "version": "0.1.2",
+  "version": "0.1.3",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "podcast-recommendations",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "transport": {
         "type": "stdio"
       },
