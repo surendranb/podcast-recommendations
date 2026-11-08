@@ -1,3 +1,2 @@
-include skills/*.md
 include README.md
 include LICENSE
