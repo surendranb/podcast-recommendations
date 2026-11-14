@@ -1,0 +1,30 @@
+{
+  "name": "podcast-recommendations",
+  "version": "0.1.3",
+  "description": "Podcast discovery and recommendations engine for AI agents: topic searches, curated picks, and feed URLs. Zero API keys.",
+  "author": {
+    "name": "Surendran B",
+    "url": "https://github.com/surendranb"
+  },
+  "homepage": "https://podcasts.builditwithai.xyz",
+  "repository": "https://github.com/surendranb/podcast-recommendations",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "podcasts",
+    "audio",
+    "rss",
+    "claude",
+    "ai-agents"
+  ],
+  "mcpServers": {
+    "podcast-recommendations": {
+      "command": "uvx",
+      "args": [
+        "podcast-recommendations==0.1.3"
+      ]
+    }
+  }
+}
