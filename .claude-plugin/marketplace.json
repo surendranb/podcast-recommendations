@@ -1,0 +1,19 @@
+{
+  "name": "podcast-recommendations",
+  "owner": {
+    "name": "Surendran B",
+    "url": "https://github.com/surendranb"
+  },
+  "metadata": {
+    "description": "Podcast discovery and recommendations engine for AI agents: topic searches, curated picks, and feed URLs. Zero API keys.",
+    "version": "0.1.3"
+  },
+  "plugins": [
+    {
+      "name": "podcast-recommendations",
+      "source": "./",
+      "description": "Podcast discovery and recommendations engine for AI agents: topic searches, curated picks, and feed URLs. Zero API keys.",
+      "strict": false
+    }
+  ]
+}
